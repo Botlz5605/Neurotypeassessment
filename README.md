@@ -1,4 +1,4 @@
-# Neurobuild Assessment — Kronos Longevity & Performance
+# Neurobuild Assessment — Boltz Performance
 
 The 30-question quiz that sorts a lifter into one of three Neurobuild
 types — **Challenger**, **Guardian**, or **Storm** — and hands off the
@@ -100,6 +100,8 @@ ever recreate the tags or sequences in Kit:
   buckets; `tr` scores the 11 personality traits.
 - **Type copy** (training, nutrition, mantra, etc.) — edit the
   `TYPES` object in `index.html`.
-- **Styling** — all CSS is inline in `index.html`'s `<style>` block,
-  using the existing Kronos design system (Outfit + Fraunces fonts,
-  ink/accent color variables at the top).
+- **Styling** — all CSS is inline in `index.html`'s `<style>` block.
+  Dark neon theme: Orbitron (display) + Outfit (body) fonts, halftone/
+  sunburst backdrop, per-type accent colors (`--challenger`, `--guardian`,
+  `--storm`) defined at the top, plus a global `--accent` that gets
+  swapped to the matching type color once a result renders.
