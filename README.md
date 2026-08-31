@@ -11,6 +11,9 @@ Live at: neurotypeassessment.netlify.app
 
 ```
 index.html                        the whole quiz — markup, styles, and scoring logic
+assets/challenger.jpg              character art for The Challenger
+assets/guardian.jpg                character art for The Guardian
+assets/storm.jpg                   character art for The Storm
 netlify/functions/subscribe.js    serverless function that talks to Kit
 ```
 
