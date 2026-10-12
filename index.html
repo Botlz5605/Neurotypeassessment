@@ -406,13 +406,13 @@
         <div class="kw">Intensity</div>
       </div>
       <div class="type-card tc-guardian">
-        <img class="portrait" src="assets/guardian.jpg" alt="Guardian character art" />
-        <div class="name">Guardian</div>
+        <img class="portrait" src="assets/guardian.jpg" alt="Operator character art" />
+        <div class="name">Operator</div>
         <div class="kw">Reserve</div>
       </div>
       <div class="type-card tc-storm">
-        <img class="portrait" src="assets/storm.jpg" alt="Storm character art" />
-        <div class="name">Storm</div>
+        <img class="portrait" src="assets/storm.jpg" alt="Architect character art" />
+        <div class="name">Architect</div>
         <div class="kw">Control</div>
       </div>
     </div>
@@ -512,7 +512,7 @@ const TYPES = {
     similarTo: { name: "The Igniter", desc: "The hot-blooded rival who trains twice as hard chasing the next level — never satisfied standing still." }
   },
   guardian: {
-    name: "The Guardian", code: "Neurobuild Type · Adrenaline Dominant", keyword: "Reserve", color: "#3aa0ff", portrait: "assets/guardian.jpg",
+    name: "The Operator", code: "Neurobuild Type · Adrenaline Dominant", keyword: "Reserve", color: "#3aa0ff", portrait: "assets/guardian.jpg",
     mantra: "I get stronger by staying ready.",
     tagline: "Even-keeled day to day, but the power shows up when the stakes are real. You need variety to stay engaged and sensation to know it's actually working — rigid, flat programming leaves you flat too.",
     genetics: { neurotransmitter: "Adrenaline / Norepinephrine", deficiency: "Baseline drive without stakes", response: "Threat-response, protector instinct" },
@@ -525,14 +525,14 @@ const TYPES = {
     similarTo: { name: "The Still Water", desc: "Calm on the surface, but the one everyone wants on their side when it actually matters." }
   },
   storm: {
-    name: "The Storm", code: "Neurobuild Type · Inhibitor-Deficient", keyword: "Control", color: "#b06bff", portrait: "assets/storm.jpg",
+    name: "The Architect", code: "Neurobuild Type · Inhibitor-Deficient", keyword: "Control", color: "#b06bff", portrait: "assets/storm.jpg",
     mantra: "The power was never the problem. Control was.",
     tagline: "A powerful nervous system that struggles to downshift. Bloodwork looks clean, but you feel wired and tired. Predictability isn't boring for you — it's what actually lets your body perform.",
     genetics: { neurotransmitter: "Low GABA / Serotonin", deficiency: "Ability to downshift under load", response: "Nervous system runs slightly hot at rest" },
     training: "Minimal variation — keep exercises identical for months. Repetition builds skill and lowers anxiety at the same time. Long, gradual warm-ups to feel safe before working sets. Slow tempos and pauses build technical control. No explosive or unpredictable movement — your structural system can't absorb the chaos. Long rest intervals (3–4 min); use them for mobility work. Fixed, moderate volume.",
     nutrition: "Routine is king — same meals, same times, daily. Predictable food lowers your cortisol. Caloric minimums matter more than maximums; restriction combined with your wiring is a genuinely risky mix. Moderate-to-higher carbs, timed carefully. Magnesium glycinate in the evening is close to non-negotiable. Limit caffeine to before noon. Skip intermittent fasting.",
     recovery: "The most important lever you have. 9 hours of sleep, period. Strict wind-down routine, no screens after 9pm. Heat works for you — cold exposure generally doesn't. Breathwork and parasympathetic work are as important as the training itself. Long rest periods between sets aren't wasted time, they're the strategy.",
-    stressors: "Variation, surprise, training to failure, chaotic environments, restrictive eating, late-night screens, caffeine, alcohol, last-minute changes to plans.",
+    stressors: "Variation, surprise, training to failure, chaotic environments, restrictive eating, late-night screens, caffeine, last-minute changes to plans.",
     strengths: ["Technical mastery through repetition", "Injury-resistant when programmed correctly", "Highly structured and reliable", "Excellent attention to detail"],
     watchouts: ["Anxiety combined with restriction is a real risk worth watching", "Can chase control to the point of inflexibility", "Avoids productive discomfort", "Cortisol cascades if routine breaks for more than a couple of days"],
     similarTo: { name: "The Overcharged", desc: "Immense power that hasn't learned to rest yet — the arc isn't about getting stronger, it's about control." }
@@ -681,11 +681,11 @@ const QUESTIONS = [
     { t: "Rarely. Once I commit, I follow through.", s: { "2B": 3, "3": 1 }, tr: { orderliness: 2, agreeability: 1, patience: 1 } },
     { t: "Almost never. Last-minute stresses me.", s: { "3": 3, "2B": 2 }, tr: { orderliness: 2, cautiousness: 2 } }
   ]},
-  { dim: "Lifestyle", q: "Alcohol — how do you handle it?", opts: [
-    { t: "Fine. 2–3 drinks, sleep is normal.", s: { "2A": 2, "2B": 3 }, tr: { adaptability: 1, patience: 1 } },
-    { t: "OK in moderation, but sleep is worse.", s: { "1B": 3, "1A": 2 }, tr: { adaptability: 1 } },
-    { t: "Hits harder than it used to.", s: { "1A": 2, "2A": 2 }, tr: { cautiousness: 1 } },
-    { t: "Wrecks me. Anxiety, bad sleep, 2–3 day hangover.", s: { "3": 3 }, tr: { cautiousness: 2, empathy: 1 } }
+  { dim: "Lifestyle", q: "After a bad night's sleep, a long travel day, or a time-zone change, how do you bounce back?", opts: [
+    { t: "Fine. One normal night and I'm reset.", s: { "2A": 2, "2B": 3 }, tr: { adaptability: 1, patience: 1 } },
+    { t: "OK, but I feel it for a day or two.", s: { "1B": 3, "1A": 2 }, tr: { adaptability: 1 } },
+    { t: "It hits harder than it used to.", s: { "1A": 2, "2A": 2 }, tr: { cautiousness: 1 } },
+    { t: "Wrecks me. Anxiety, bad sleep, days to feel normal.", s: { "3": 3 }, tr: { cautiousness: 2, empathy: 1 } }
   ]},
   { dim: "Lifestyle", q: "Tolerance for ambiguity (unclear expectations, open-ended tasks)?", opts: [
     { t: "High. I create the structure myself.", s: { "1A": 3, "1B": 2, "2A": 1 }, tr: { selfEsteem: 2, adaptability: 1, mentalToughness: 1 } },
@@ -703,7 +703,7 @@ const QUESTIONS = [
     { t: "Sugar and stimulants. I want a hit.", s: { "1A": 3, "3": 2 }, tr: { aggressiveness: 1, patience: -1 } },
     { t: "Coffee, maybe a sweet treat.", s: { "1B": 3, "1A": 1 }, tr: { adaptability: 1 } },
     { t: "Salty carbs. Chips, bread, comfort food.", s: { "2A": 3 }, tr: { agreeability: 1, empathy: 1 } },
-    { t: "Alcohol, sugar, or I lose appetite entirely.", s: { "3": 3, "2B": 1 }, tr: { cautiousness: 2, empathy: 1 } }
+    { t: "Sugar, or I lose appetite entirely.", s: { "3": 3, "2B": 1 }, tr: { cautiousness: 2, empathy: 1 } }
   ]},
   { dim: "Hormonal Cues", q: "How's your libido at baseline?", opts: [
     { t: "High. Consistent, strong drive.", s: { "1A": 3, "1B": 2 }, tr: { selfEsteem: 2, aggressiveness: 1 } },
@@ -825,18 +825,43 @@ function normalizeTrait(raw, trait) {
   return Math.max(0, Math.min(10, Math.round(pct * 10)));
 }
 
+/* Challenger and Guardian each pool two internal buckets; Storm pools one,
+   so raw totals favour the pooled types. Each type's raw score is divided by
+   the total weight that type can earn across every answer option, which puts
+   all three on the same scale (a neutral answerer scores ~equal on each). */
+const TYPE_WEIGHT_TOTALS = (() => {
+  const t = { challenger: 0, guardian: 0, storm: 0 };
+  QUESTIONS.forEach(q => q.opts.forEach(o => {
+    t.challenger += (o.s["1A"] || 0) + (o.s["1B"] || 0);
+    t.guardian   += (o.s["2A"] || 0) + (o.s["2B"] || 0);
+    t.storm      += (o.s["3"] || 0);
+  }));
+  return t;
+})();
+
 function aggregateToNeurobuildTypes() {
-  return { challenger: rawScores["1A"] + rawScores["1B"], guardian: rawScores["2A"] + rawScores["2B"], storm: rawScores["3"] };
+  return {
+    challenger: (rawScores["1A"] + rawScores["1B"]) / TYPE_WEIGHT_TOTALS.challenger,
+    guardian:   (rawScores["2A"] + rawScores["2B"]) / TYPE_WEIGHT_TOTALS.guardian,
+    storm:      rawScores["3"] / TYPE_WEIGHT_TOTALS.storm
+  };
 }
+
+// Gap (in percentage points of the displayed profile) that counts as a close call.
+const BLEND_GAP = 5;       // within this: shown as a blend of the top two types
+const SECONDARY_GAP = 12;  // within this: secondary influence shown
 
 function showGate() {
   calcScores();
   const nb = aggregateToNeurobuildTypes();
   const total = nb.challenger + nb.guardian + nb.storm || 1;
+  const pctOf = k => (nb[k] / total) * 100;
   const sorted = Object.entries(nb).sort((a, b) => b[1] - a[1]);
   const primary = sorted[0][0];
   const secondary = sorted[1][0];
-  const showSecondary = (sorted[0][1] - sorted[1][1]) <= 6;
+  const gapPts = pctOf(primary) - pctOf(secondary);
+  const isBlend = gapPts <= BLEND_GAP;
+  const showSecondary = gapPts <= SECONDARY_GAP;
 
   const traitDisplay = {};
   Object.keys(traitScores).forEach(tr => { traitDisplay[tr] = normalizeTrait(traitScores[tr], tr); });
@@ -848,7 +873,7 @@ function showGate() {
     storm: Math.round((nb.storm / total) * 100)
   };
 
-  pendingResult = { primary, secondary, showSecondary, orderedTraits, scorePcts };
+  pendingResult = { primary, secondary, showSecondary, isBlend, orderedTraits, scorePcts };
 
   document.getElementById('quiz').classList.add('hidden');
   document.getElementById('gate').classList.remove('hidden');
@@ -881,7 +906,7 @@ async function submitGate(e) {
 }
 
 function showResult(pending) {
-  const { primary, secondary, showSecondary, orderedTraits, scorePcts } = pending;
+  const { primary, secondary, showSecondary, isBlend, orderedTraits, scorePcts } = pending;
   const t = TYPES[primary];
   const t2 = TYPES[secondary];
 
@@ -907,7 +932,11 @@ function showResult(pending) {
     <p class="mantra">"${t.mantra}"</p>
     <p class="tagline">${t.tagline}</p>
 
-    ${showSecondary ? `
+    ${isBlend ? `
+      <div class="secondary-type">
+        <strong>Close call: ${t.name} with strong ${t2.name.replace(/^The /, '')} tendencies.</strong> Your top two scores are within a few points of each other, so you run as a blend. Read both profiles — ${t2.name} (${t2.keyword}): ${t2.tagline}
+      </div>
+    ` : showSecondary ? `
       <div class="secondary-type">
         <strong>Secondary influence: ${t2.name}.</strong> Your scores show a meaningful pull toward this type too. Expect some blended tendencies — this is normal and usable data.
       </div>
